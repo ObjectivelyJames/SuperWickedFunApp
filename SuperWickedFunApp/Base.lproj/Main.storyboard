@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="REf-EM-3X5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0Rd-4j-hQ8">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Widget's Great App-->
         <scene sceneID="htS-vy-BXU">
             <objects>
-                <viewController id="REf-EM-3X5" sceneMemberID="viewController">
+                <viewController id="REf-EM-3X5" customClass="ViewController" customModule="SuperWickedFunApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QJV-ur-tcP"/>
                         <viewControllerLayoutGuide type="bottom" id="zGZ-dE-GmK"/>
@@ -15,12 +16,160 @@
                     <view key="view" contentMode="scaleToFill" id="B4t-Ka-5ZT">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Widget" translatesAutoresizingMaskIntoConstraints="NO" id="Hqf-Fo-w9a">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3T-3R-c0C">
+                                <rect key="frame" x="256" y="550" width="88" height="30"/>
+                                <state key="normal" title="Tell Me More">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XoC-cb-lJO" kind="show" id="1w7-fX-Cg7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckO-TW-fmq">
+                                <rect key="frame" x="220" y="512" width="160" height="30"/>
+                                <state key="normal" title="Share Me On Facebook">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareOnFacebook:" destination="REf-EM-3X5" eventType="touchUpInside" id="zCT-CJ-dwQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BQ-Z0-orQ">
+                                <rect key="frame" x="240" y="474" width="120" height="30"/>
+                                <state key="normal" title="Tweet My Widget">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="tweetSelected:" destination="REf-EM-3X5" eventType="touchUpInside" id="Kin-Yq-BOB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOS-Yq-X9C">
+                                <rect key="frame" x="245" y="436" width="110" height="30"/>
+                                <state key="normal" title="Where's Widget">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Y49-XN-c13" kind="show" id="zJK-eD-PqR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mOS-Yq-X9C" firstAttribute="centerX" secondItem="Hqf-Fo-w9a" secondAttribute="centerX" id="10C-bW-Ry5"/>
+                            <constraint firstAttribute="trailing" secondItem="Hqf-Fo-w9a" secondAttribute="trailing" id="87L-Au-a16"/>
+                            <constraint firstItem="7BQ-Z0-orQ" firstAttribute="centerX" secondItem="Hqf-Fo-w9a" secondAttribute="centerX" id="KYv-rJ-PIc"/>
+                            <constraint firstItem="w3T-3R-c0C" firstAttribute="top" secondItem="ckO-TW-fmq" secondAttribute="bottom" constant="8" id="L52-r5-GKV"/>
+                            <constraint firstItem="ckO-TW-fmq" firstAttribute="top" secondItem="7BQ-Z0-orQ" secondAttribute="bottom" constant="8" id="LlB-NR-KTl"/>
+                            <constraint firstItem="zGZ-dE-GmK" firstAttribute="top" secondItem="Hqf-Fo-w9a" secondAttribute="bottom" id="SCS-KG-SSU"/>
+                            <constraint firstItem="w3T-3R-c0C" firstAttribute="centerX" secondItem="B4t-Ka-5ZT" secondAttribute="centerX" id="lia-Y9-ppJ"/>
+                            <constraint firstItem="Hqf-Fo-w9a" firstAttribute="leading" secondItem="B4t-Ka-5ZT" secondAttribute="leading" id="mx1-YI-WoO"/>
+                            <constraint firstItem="zGZ-dE-GmK" firstAttribute="top" secondItem="w3T-3R-c0C" secondAttribute="bottom" constant="20" id="nOY-wF-iU2"/>
+                            <constraint firstItem="ckO-TW-fmq" firstAttribute="centerX" secondItem="B4t-Ka-5ZT" secondAttribute="centerX" id="uAv-I1-cnp"/>
+                            <constraint firstItem="7BQ-Z0-orQ" firstAttribute="top" secondItem="mOS-Yq-X9C" secondAttribute="bottom" constant="8" id="vwf-ph-hHz"/>
+                            <constraint firstItem="Hqf-Fo-w9a" firstAttribute="top" secondItem="B4t-Ka-5ZT" secondAttribute="top" id="z8W-Ga-dAg"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Widget's Great App" id="S0j-EA-jOa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhy-MO-RXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="404" y="1007"/>
+            <point key="canvasLocation" x="1221" y="988"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rZV-XQ-ZTM">
+            <objects>
+                <viewController id="Y49-XN-c13" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4H8-h1-Omk"/>
+                        <viewControllerLayoutGuide type="bottom" id="vNx-s5-LnH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oK4-ZT-GgL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gxk-d1-m3k">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gxk-d1-m3k" firstAttribute="leading" secondItem="oK4-ZT-GgL" secondAttribute="leading" id="XHp-Jo-fhL"/>
+                            <constraint firstItem="vNx-s5-LnH" firstAttribute="top" secondItem="gxk-d1-m3k" secondAttribute="bottom" id="bMk-wl-UGO"/>
+                            <constraint firstItem="gxk-d1-m3k" firstAttribute="top" secondItem="oK4-ZT-GgL" secondAttribute="top" id="d9T-21-VeW"/>
+                            <constraint firstAttribute="trailing" secondItem="gxk-d1-m3k" secondAttribute="trailing" id="vIU-18-K55"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eVy-3t-hTS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221" y="1731"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6OD-Ws-zXH">
+            <objects>
+                <viewController id="XoC-cb-lJO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8yL-ds-uEi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ufi-kQ-trz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U2T-KQ-O49">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Widget" translatesAutoresizingMaskIntoConstraints="NO" id="v7q-uB-GnI" customClass="RoundImageView" customModule="SuperWickedFunApp" customModuleProvider="target">
+                                <rect key="frame" x="225" y="72" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="6cK-oI-HLr"/>
+                                    <constraint firstAttribute="width" constant="150" id="8Sx-wk-DGr"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bJI-az-uZj">
+                                <rect key="frame" x="20" y="236" width="560" height="344"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v7q-uB-GnI" firstAttribute="top" secondItem="8yL-ds-uEi" secondAttribute="bottom" constant="8" id="0EZ-Wi-3Zq"/>
+                            <constraint firstItem="Ufi-kQ-trz" firstAttribute="top" secondItem="bJI-az-uZj" secondAttribute="bottom" constant="20" id="Bbq-Vf-Adh"/>
+                            <constraint firstItem="bJI-az-uZj" firstAttribute="leading" secondItem="U2T-KQ-O49" secondAttribute="leadingMargin" id="M6v-fl-Rx8"/>
+                            <constraint firstItem="bJI-az-uZj" firstAttribute="trailing" secondItem="U2T-KQ-O49" secondAttribute="trailingMargin" id="ald-xP-s5Q"/>
+                            <constraint firstItem="bJI-az-uZj" firstAttribute="top" secondItem="v7q-uB-GnI" secondAttribute="bottom" constant="14" id="rad-DR-Kga"/>
+                            <constraint firstItem="v7q-uB-GnI" firstAttribute="centerX" secondItem="U2T-KQ-O49" secondAttribute="centerX" id="rtM-Em-wdd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="43O-Do-oxW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1910" y="988"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="n0T-bH-gYy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Rd-4j-hQ8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sBn-1O-TbH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="REf-EM-3X5" kind="relationship" relationship="rootViewController" id="vkg-J4-kyp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O5N-P2-xo6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="409" y="988"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Widget" width="664" height="820"/>
+    </resources>
 </document>

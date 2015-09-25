@@ -15,6 +15,7 @@
 		B76970F31BB46FEE00557F2E /* RoundedCornerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76970F21BB46FEE00557F2E /* RoundedCornerButton.swift */; settings = {ASSET_TAGS = (); }; };
 		B76970F61BB4700E00557F2E /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76970F51BB4700E00557F2E /* RoundImageView.swift */; settings = {ASSET_TAGS = (); }; };
 		B76970F81BB4715D00557F2E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B76970F71BB4715D00557F2E /* MapKit.framework */; };
+		B7DCA0171BB4BFE8009D89B2 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7DCA0161BB4BFE8009D89B2 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B76970F21BB46FEE00557F2E /* RoundedCornerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerButton.swift; sourceTree = "<group>"; };
 		B76970F51BB4700E00557F2E /* RoundImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		B76970F71BB4715D00557F2E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B7DCA0161BB4BFE8009D89B2 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7DCA0171BB4BFE8009D89B2 /* Social.framework in Frameworks */,
 				B76970F81BB4715D00557F2E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +48,7 @@
 		B76970D31BB4670B00557F2E = {
 			isa = PBXGroup;
 			children = (
+				B7DCA0161BB4BFE8009D89B2 /* Social.framework */,
 				B76970DE1BB4670B00557F2E /* SuperWickedFunApp */,
 				B76970DD1BB4670B00557F2E /* Products */,
 			);
@@ -327,6 +331,7 @@
 				B76970F01BB4670B00557F2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
